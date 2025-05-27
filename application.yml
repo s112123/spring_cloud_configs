@@ -4,6 +4,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 spring:
+  cloud:
+      bus:
+        enabled: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3309/ordermsa?useSSL=false&allowPublicKeyRetrieval=true
@@ -18,3 +21,8 @@ spring:
   redis:
     host: localhost
     port: 6381
+  rabbitmq:
+    host: localhost
+    port: 5675
+    username: guest
+    password: guest
